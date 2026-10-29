@@ -1,33 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   // 1. Program Category Filter Functionality
-  const filterButtons = document.querySelectorAll('.tab-btn');
-  const programCards = document.querySelectorAll('.program-card');
+  const filterButtons = document.querySelectorAll(".tab-btn");
+  const programCards = document.querySelectorAll(".program-card");
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-      const filterValue = btn.getAttribute('data-filter');
+      const filterValue = btn.getAttribute("data-filter");
 
-      programCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || filterValue === category) {
-          card.style.display = 'block';
+      programCards.forEach((card) => {
+        const category = card.getAttribute("data-category");
+        if (filterValue === "all" || filterValue === category) {
+          card.style.display = "block";
         } else {
-          card.style.display = 'none';
+          card.style.display = "none";
         }
       });
     });
   });
 
   // 2. Testimonials Slider Functionality
-  const track = document.getElementById('testimonialTrack');
-  const nextBtn = document.getElementById('nextTestimonial');
-  const prevBtn = document.getElementById('prevTestimonial');
-  const slides = document.querySelectorAll('.testimonial-card');
-  
+  const track = document.getElementById("testimonialTrack");
+  const nextBtn = document.getElementById("nextTestimonial");
+  const prevBtn = document.getElementById("prevTestimonial");
+  const slides = document.querySelectorAll(".testimonial-card");
+
   let currentIndex = 0;
 
   function updateSlider() {
@@ -35,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (nextBtn && prevBtn) {
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener("click", () => {
       currentIndex = (currentIndex + 1) % slides.length;
       updateSlider();
     });
 
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
       updateSlider();
     });
@@ -52,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Counter Animation for Impact Stats
-  const statNumbers = document.querySelectorAll('.stat-number');
+  const statNumbers = document.querySelectorAll(".stat-number");
   let animated = false;
 
   function animateCounters() {
-    statNumbers.forEach(stat => {
-      const target = +stat.getAttribute('data-target');
-      const duration = 2000; 
+    statNumbers.forEach((stat) => {
+      const target = +stat.getAttribute("data-target");
+      const duration = 2000;
       const stepTime = 20;
       const steps = duration / stepTime;
       const increment = target / steps;
@@ -76,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('scroll', () => {
-    const statsSection = document.querySelector('.stats-section');
+  window.addEventListener("scroll", () => {
+    const statsSection = document.querySelector(".stats-section");
     if (statsSection) {
       const sectionPos = statsSection.getBoundingClientRect().top;
       const screenPos = window.innerHeight;
@@ -88,29 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
-
 });
 
 // 4. Modal Handlers
 function openModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
-    modal.classList.add('active');
+    modal.classList.add("active");
   }
 }
 
 function closeModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
-    modal.classList.remove('active');
+    modal.classList.remove("active");
   }
 }
 
-window.addEventListener('click', (e) => {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
+window.addEventListener("click", (e) => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
     if (e.target === modal) {
-      modal.classList.remove('active');
+      modal.classList.remove("active");
     }
   });
 });
