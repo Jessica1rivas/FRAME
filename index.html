@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Superior FRAME</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <p>🎓 Admisión Abierta 2026-I — ¡Asegura tu futuro con el 95% de empleabilidad!</p>
+    <a href="#contacto" class="link-light">Más información <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <img src="./imagenes/logo.png" alt="Logo FRAME" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-title">FRAME</span>
+          <span class="logo-sub">INSTITUTO SUPERIOR</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#programas">Carreras</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#eventos">Eventos</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="btn btn-primary" onclick="openModal('admissionModal')">
+          <i class="fa-solid fa-paper-plane"></i> Postula Aquí
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge"><i class="fa-solid fa-sparkles"></i> Imagina • Crea • Trasciende</span>
+        <h1>Tu Educación Soñada Empieza <span class="highlight">Aquí</span></h1>
+        <p>En el Instituto Superior Frame brindamos educación técnica de alta calidad, ambientes modernos y el
+          acompañamiento que necesitas para alcanzar tus metas profesionales.</p>
+
+        <div class="hero-btns">
+          <a href="#programas" class="btn btn-primary btn-lg">Explorar Carreras <i
+              class="fa-solid fa-arrow-right"></i></a>
+          <button class="btn btn-outline btn-lg" onclick="openModal('videoModal')">
+            <i class="fa-solid fa-circle-play"></i> Tour Campus
+          </button>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="h-stat-item">
+            <h3>Top 5</h3>
+            <p>Instituto Licenciado</p>
+          </div>
+          <div class="h-stat-item">
+            <h3>15+</h3>
+            <p>Carreras Técnicas</p>
+          </div>
+          <div class="h-stat-item">
+            <h3>10k+</h3>
+            <p>Estudiantes Activos</p>
+          </div>
+          <div class="h-stat-item">
+            <h3>95%</h3>
+            <p>Inserción Laboral</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="img-backdrop"></div>
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+          alt="Estudiante Frame" class="hero-img">
+        <div class="floating-badge badge-1">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <strong>Excelencia Académica</strong>
+            <small>Plana docente especializada</small>
+          </div>
+        </div>
+        <div class="floating-badge badge-2">
+          <i class="fa-solid fa-laptop-code"></i>
+          <div>
+            <strong>Laboratorios Equipados</strong>
+            <small>Práctica desde el 1er día</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Programs Section -->
+  <section class="section bg-light" id="programas">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">NUESTROS PROGRAMAS</span>
+        <h2>Encuentra la Carrera Adecuada para Ti</h2>
+        <p>Opciones de estudio flexibles con currículo actualizado y enfocado en la alta demanda del mercado laboral
+          actual.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">Todos los Programas</button>
+        <button class="tab-btn" data-filter="tech">Diseño UX/UI</button>
+        <button class="tab-btn" data-filter="business">Producción Audiovisual</button>
+        <button class="tab-btn" data-filter="engineering">Animación Digital 2D y 3D</button>
+        <button class="tab-btn" data-filter="design">Ilustración digital y Arte conceptual</button>
+      </div>
+
+      <!-- Grid Cards -->
+      <div class="programs-grid" id="programsGrid">
+
+        <div class="program-card" data-category="tech">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
+              alt="Diseño UX/UI">
+            <span class="card-tag">Tecnología</span>
+          </div>
+          <div class="card-body">
+            <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+            <h3>Diseño UX/UI</h3>
+            <p>Crea soluciones tecnológicas innovadoras, software robusto, páginas web y aplicaciones móviles.</p>
+            <a href="#contacto" class="card-link">Saber más <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <div class="program-card" data-category="business">
+          <div class="card-img-wrap">
+            <img src="./imagenes/produccion_audiovisual.jpg" alt="Producción Audiovisual"
+              onerror="this.src='https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80'">
+            <span class="card-tag">Videos</span>
+          </div>
+          <div class="card-body">
+            <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Producción Audiovisual</h3>
+            <p>Aprende rodaje, manejo de cámaras, iluminación, edición de video, diseño de audio y postproducción.</p>
+            <a href="#contacto" class="card-link">Saber más <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <div class="program-card" data-category="engineering">
+          <div class="card-img-wrap">
+            <img src="./imagenes/animacion_2D_3D.jpg" alt="Animación Digital"
+              onerror="this.src='https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&w=600&q=80'">
+            <span class="card-tag">Animación</span>
+          </div>
+          <div class="card-body">
+            <div class="icon-box"><i class="fa-solid fa-gears"></i></div>
+            <h3>Animación Digital 2D y 3D</h3>
+            <p>Creación de personajes, entornos y efectos visuales en movimiento para cine, videojuegos, publicidad y
+              contenido digital.</p>
+            <a href="#contacto" class="card-link">Saber más <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <div class="program-card" data-category="design">
+          <div class="card-img-wrap">
+            <img src="./imagenes/illustracion_digital.jpg" alt="Ilustración digital"
+              onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80'">
+            <span class="card-tag">Creatividad</span>
+          </div>
+          <div class="card-body">
+            <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
+            <h3>Ilustración digital y Arte conceptual</h3>
+            <p>Creación de la identidad visual, diseños iniciales e ilustraciones artísticas para videojuegos,
+              películas, cómics y marcas.</p>
+            <a href="#contacto" class="card-link">Saber más <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="nosotros">
+    <div class="container about-grid">
+      <div class="about-img-group">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"
+          alt="Campus Frame" class="main-about-img">
+        <div class="experience-badge">
+          <span class="exp-num">15+</span>
+          <span class="exp-text">Años Formando Profesionales de Éxito</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="sub-title">SOBRE EL INSTITUTO FRAME</span>
+        <h2>Un Lugar para Aprender, Crecer y Destacar</h2>
+        <p>Nos dedicamos a impulsar el talento mediante metodologías basadas en retos reales, talleres de última
+          generación y alianzas estratégicas con empresas punteras del país.</p>
+
+        <div class="about-features">
+          <div class="feat-item">
+            <div class="feat-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div>
+              <h4>Campus y Aulas Modernas</h4>
+              <p>Infraestructura diseñada para la innovación técnica y tecnológica.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div>
+              <h4>Docentes Especialistas</h4>
+              <p>Profesionales activos en el mercado laboral compartiendo experiencia real.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <h4>Convenios e Inserción Laboral</h4>
+              <p>Bolsa de trabajo activa con empresas reconocidas a nivel nacional.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-dark" onclick="openModal('admissionModal')">
+          Conoce Más Sobre Nosotros <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Counter Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="section-header text-center text-white">
+        <span class="sub-title light">NUESTRO IMPACTO EN NÚMEROS</span>
+        <h2 class="text-white">Años de excelencia transformando vidas</h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="stat-number" data-target="15">0</div>
+          <p>Años de Trayectoria</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-book-open"></i></div>
+          <div class="stat-number" data-target="18">0</div>
+          <p>Carreras Técnicas</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="stat-number" data-target="12000">0</div>
+          <p>Estudiantes Matriculados</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="stat-number" data-target="95">0</div>
+          <p>% de Empleabilidad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">HISTORIAS REALES</span>
+        <h2>Testimonios de Nuestros Egresados</h2>
+        <p>Descubre cómo la educación en Frame impulsó la carrera profesional de nuestros exalumnos.</p>
+      </div>
+
+      <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Frame me brindó todas las herramientas prácticas desde el primer ciclo. Gracias a los proyectos reales,
+              conseguí mi primer empleo antes de titularme."</p>
+            <div class="author-info">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                alt="Valeria">
+              <div>
+                <h5>Valeria Ramos</h5>
+                <small>Egresada de Diseño UX/UI</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"La exigencia académica y los laboratorios son excelentes. Hoy dirijo el área de Animación Digital 2D Y
+              3D en una destacada empresa tecnológica."</p>
+            <div class="author-info">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                alt="Rafael">
+              <div>
+                <h5>Rafael Gómez</h5>
+                <small>Egresado de Animación Digital 2D Y 3D</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"La visión práctica y los profesores en ejercicio me permitieron formar mi propia agencia de Producción
+              Audiovisual al terminar la carrera."</p>
+            <div class="author-info">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80"
+                alt="Rocío">
+              <div>
+                <h5>Rocío Javier</h5>
+                <small>Egresada de Producción Audiovisual</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevTestimonial"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-btn" id="nextTestimonial"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Events Section -->
+  <section class="section" id="noticias">
+    <div class="container">
+      <div class="section-header flex-header">
+        <div>
+          <span class="sub-title">LO ÚLTIMO EN EL INSTITUTO</span>
+          <h2>Noticias & Actividades</h2>
+        </div>
+        <a href="#" class="link-btn">Ver todas las noticias <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
+            alt="Noticia 1">
+          <div class="news-content">
+            <span class="news-date"><i class="fa-solid fa-calendar"></i> 10 de Octubre, 2026</span>
+            <h3>Concurso de Carreras</h3>
+            <p>Aperturamos un nuevo programa con enfoque en análisis avanzado y automatización digital.</p>
+            <a href="#" class="news-link">Leer artículo completo →</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+            alt="Noticia 2">
+          <div class="news-content">
+            <span class="news-date"><i class="fa-solid fa-calendar"></i> 18 de Octubre, 2026</span>
+            <h3>Convenio Internacional de Intercambio Técnico</h3>
+            <p>Nuestros estudiantes tendrán la oportunidad de realizar semestres en el extranjero.</p>
+            <a href="#" class="news-link">Leer artículo completo →</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80"
+            alt="Noticia 3">
+          <div class="news-content">
+            <span class="news-date"><i class="fa-solid fa-calendar"></i> 25 de Octubre, 2026</span>
+            <h3>Feria Anual de Empleabilidad e Innovación</h3>
+            <p>Más de 40 empresas visitaron el campus conectando con nuestros futuros graduados.</p>
+            <a href="#" class="news-link">Leer artículo completo →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Upcoming Events Row -->
+      <div class="events-wrapper" id="eventos">
+        <div class="events-header">
+          <h3><i class="fa-solid fa-calendar-days"></i> Próximos Eventos</h3>
+        </div>
+        <div class="events-list">
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">02</span>
+              <span class="month">NOV</span>
+            </div>
+            <div class="event-info">
+              <h4>Feria de Proyectos e Innovación 2026</h4>
+              <p><i class="fa-regular fa-clock"></i> 09:00 AM - 04:00 PM | Auditorio Principal</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openModal('admissionModal')">Inscribirse</button>
+          </div>
+
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">12</span>
+              <span class="month">NOV</span>
+            </div>
+            <div class="event-info">
+              <h4>Workshop: Tendencias en Tecnología y Programación</h4>
+              <p><i class="fa-regular fa-clock"></i> 03:00 PM - 06:00 PM | Laboratorio 03</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="openModal('admissionModal')">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <div class="container cta-container">
+      <div>
+        <h2>¿Listo para Iniciar tu Camino al Éxito Profesional?</h2>
+        <p>Forma parte de la comunidad Frame y transforma tu pasión en una carrera rentable.</p>
+      </div>
+      <button class="btn btn-light btn-lg" onclick="openModal('admissionModal')">
+        Postular Ahora <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo light">
+          <img src="./imagenes/logo.png" alt="Logo FRAME" class="logo-img">
+          <span class="logo-title">FRAME</span>
+        </div>
+        <p>Instituto de Educación Superior comprometido con la excelencia académica y la formación técnica práctica.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#programas">Carreras Técnicas</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#noticias">Noticias y Eventos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i> +51 (01) 555-0192</li>
+          <li><i class="fa-solid fa-envelope"></i> informes@frame.edu.pe</li>
+          <li><i class="fa-solid fa-location-dot"></i> Av. Principal 123, Campus Central</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boletín Informativo</h4>
+        <p>Recibe noticias y fechas de exámenes de admisión en tu correo.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p>&copy; 2026 Instituto Superior Frame. Todos los derechos reservados.</p>
+        <div class="bottom-links">
+          <a href="#">Políticas de Privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Admission Form -->
+  <div class="modal" id="admissionModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('admissionModal')">&times;</button>
+      <h3>Formulario de Inscripción</h3>
+      <p>Déjanos tus datos y un asesor se pondrá en contacto contigo.</p>
+      <form class="modal-form"
+        onsubmit="event.preventDefault(); alert('¡Formulario enviado con éxito!'); closeModal('admissionModal');">
+        <div class="form-group">
+          <label>Nombre Completo</label>
+          <input type="text" placeholder="Ej. Juan Pérez" required>
+        </div>
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <input type="email" placeholder="ejemplo@correo.com" required>
+        </div>
+        <div class="form-group">
+          <label>Teléfono / WhatsApp</label>
+          <input type="tel" placeholder="987654321" required>
+        </div>
+        <div class="form-group">
+          <label>Carrera de Interés</label>
+          <select required>
+            <option value="">Selecciona una opción</option>
+            <option value="sistemas">Diseño UX/UI</option>
+            <option value="admin">Producción Audiovisual</option>
+            <option value="electricidad">Animación Digital 2D y 3D</option>
+            <option value="diseno">Ilustración digital y Arte conceptual</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Virtual Tour Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content modal-video">
+      <button class="modal-close" onclick="closeModal('videoModal')">&times;</button>
+      <div class="video-container">
+        <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Tour Virtual Campus" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
