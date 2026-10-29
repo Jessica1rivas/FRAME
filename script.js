@@ -90,8 +90,3 @@ $$('.rv').forEach(e=>io.observe(e));
 const ni=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;$$('[data-n]').forEach(b=>{const n=+b.dataset.n;let v=0;const iv=setInterval(()=>{v+=Math.max(1,n/40);if(v>=n){v=n;clearInterval(iv)}b.textContent=Math.round(v)+(b.dataset.s||'')},35)});ni.disconnect()}));ni.observe($('.stats'));
 const sp=()=>{const h=document.documentElement;$('#bar').style.width=h.scrollTop/(h.scrollHeight-h.clientHeight)*100+'%';let a=S[0][0];S.forEach(s=>{if($('#'+s[0]).getBoundingClientRect().top<140)a=s[0]});$$('.links a').forEach(l=>l.classList.toggle('on',l.getAttribute('href')=='#'+a))};
 addEventListener('scroll',sp,{passive:true});sp();
-    if (e.target === modal) {
-      modal.classList.remove("active");
-    }
-  });
-});
